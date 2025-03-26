@@ -152,6 +152,15 @@ export default function Header() {
             Services
           </NavLink>
         </li>
+        <li>
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+            className="block sm:hidden text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-xl px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+          >
+            Contact ↗
+          </Link>
+        </li>
       </ul>
     </header>
   );
