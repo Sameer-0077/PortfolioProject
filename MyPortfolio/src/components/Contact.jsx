@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import ScrollReveal from "./ScrollReveal";
 
 function Contact() {
   const [messageSent, setMessageSent] = useState(false);
@@ -30,16 +32,21 @@ function Contact() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen  p-6">
+    <div
+      className="flex flex-col  justify-center items-center min-h-screen  p-6"
+      id="contact"
+    >
       <motion.div
         initial={{ opacity: 0, y: 100 }} // Starts from bottom
         animate={{ opacity: 1, y: 0 }} // Moves to normal position
         transition={{ duration: 1, ease: "easeOut" }} // Smooth effect
-        className="w-full max-w-lg p-8 bg-blue-400 backdrop-blur-lg rounded-xl shadow-lg"
+        className="w-full max-w-lg p-8 bg-gray-800 backdrop-blur-lg rounded-xl shadow-lg"
       >
-        <h1 className="text-4xl font-bold text-center text-white">
-          Contact Me
-        </h1>
+        <ScrollReveal delay={0.3} direction="left">
+          <h1 className="text-4xl font-bold text-center text-white">
+            Contact Me
+          </h1>
+        </ScrollReveal>
 
         {/* Success Message */}
         {messageSent && (
@@ -98,6 +105,52 @@ function Contact() {
           </motion.button>
         </form>
       </motion.div>
+      <ScrollReveal delay={0.3} direction="right">
+        <motion.div
+          className="mt-10 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 3 }}
+        >
+          <h2 className="text-3xl font-bold text-blue-700">Connect with Me</h2>
+          <div className="mt-6 flex justify-center space-x-6 text-2xl">
+            <a
+              href="https://www.linkedin.com/in/sameer-yadav-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-800 hover:text-blue-600 transition"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/Sameer-0077"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 hover:text-gray-600 transition"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://twitter.com/yourtwitter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-400 transition"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://www.instagram.com/yourinstagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-700 hover:text-pink-500 transition"
+            >
+              <FaInstagram />
+            </a>
+          </div>
+        </motion.div>
+      </ScrollReveal>
+      <div className=" mt-5 w-full border border-gray-700"></div>
+      <p className="mt-2">© 2025 Sameer Yadav. All rights reserved.</p>
     </div>
   );
 }

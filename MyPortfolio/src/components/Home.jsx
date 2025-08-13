@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 // Hi, I'm Sameer 👋
 const Home = () => {
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 lg:px-24">
+    <section
+      id="home"
+      className="h-screen flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 lg:px-24"
+    >
       {/* Animated heading using Framer Motion */}
 
       <motion.h1
@@ -23,7 +26,8 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        A passionate developer who loves coding and problem-solving.
+        {"</>"} A passionate full stack developer who loves coding and
+        problem-solving.
       </motion.p>
     </section>
   );
