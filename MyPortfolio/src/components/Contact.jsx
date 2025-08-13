@@ -150,7 +150,9 @@ function Contact() {
         </motion.div>
       </ScrollReveal>
       <div className=" mt-5 w-full border border-gray-700"></div>
-      <p className="mt-2">© 2025 Sameer Yadav. All rights reserved.</p>
+      <p className="mt-2 text-white">
+        © 2025 Sameer Yadav. All rights reserved.
+      </p>
     </div>
   );
 }
