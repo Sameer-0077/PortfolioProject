@@ -164,7 +164,7 @@ const Projects = () => {
                   href={project.webLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-100 transition duration-300"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-green-600 transition duration-300"
                 >
                   Live Demo
                 </a>
@@ -172,7 +172,7 @@ const Projects = () => {
                   href={project.gitRepo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-100 transition duration-300"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-400 transition duration-300"
                 >
                   GitHub Repo
                 </a>
