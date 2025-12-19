@@ -81,7 +81,7 @@ export default function Header() {
         ref={sideMenuRef}
         className="flex md:hidden flex-col gap-4 py-20 px-10
     fixed top-0 right-0 h-screen w-full
-    bg-white/10 backdrop-blur-md
+    bg-gray-900 backdrop-blur-md
     transition-transform duration-500
     transform translate-x-full
     z-50"
@@ -95,31 +95,31 @@ export default function Header() {
           />
         </div>
         <li
-          className="text-blue-950 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
+          className="text-gray-200 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
           onClick={() => closeMenu("home")}
         >
           Home
         </li>
         <li
-          className="text-blue-950 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
+          className="text-gray-200 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
           onClick={() => closeMenu("about")}
         >
           About
         </li>
         <li
-          className="text-blue-950 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
+          className="text-gray-200 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
           onClick={() => closeMenu("project")}
         >
           Project
         </li>
         <li
-          className="text-blue-950 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
+          className="text-gray-200 font-medium text-lg px-4 py-2.5 duration-200 border-b-2 border-transparent hover:border-blue-500 lg:border-0 lg:hover:bg-transparent lg:p-0"
           onClick={() => closeMenu("services")}
         >
           Services
         </li>
         <li
-          className="block sm:hidden text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-xl px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+          className="block sm:hidden text-orange-500 bg-blue-600 hover:bg-blue-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-xl px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
           onClick={() => closeMenu("contact")}
         >
           Contact ↗
