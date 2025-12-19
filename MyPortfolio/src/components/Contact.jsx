@@ -40,11 +40,11 @@ function Contact() {
         initial={{ opacity: 0, y: 100 }} // Starts from bottom
         animate={{ opacity: 1, y: 0 }} // Moves to normal position
         transition={{ duration: 1, ease: "easeOut" }} // Smooth effect
-        className="w-full max-w-lg p-8 bg-gray-800 backdrop-blur-lg rounded-xl shadow-lg"
+        className="w-full max-w-lg p-8 bg-gradient-to-r from-slate-800 via-slate-900 to-black backdrop-blur-lg rounded-xl shadow-lg"
       >
         <ScrollReveal delay={0.3} direction="left">
-          <h1 className="text-4xl font-bold text-center text-white">
-            Contact Me
+          <h1 className="text-4xl font-bold text-center text-blue-600">
+            Connect with Me
           </h1>
         </ScrollReveal>
 
@@ -126,7 +126,7 @@ function Contact() {
               href="https://github.com/Sameer-0077"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 hover:text-gray-600 transition"
+              className="text-gray-500 hover:text-gray-600 transition"
             >
               <FaGithub />
             </a>

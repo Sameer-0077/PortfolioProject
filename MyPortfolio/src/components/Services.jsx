@@ -69,20 +69,22 @@ function Services() {
           My Services
         </motion.h1>
       </ScrollReveal>
-      <ScrollReveal delay={0.3} direction="right">
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <ScrollReveal delay={0.2} direction="right">
             <motion.div
               key={index}
-              className="bg-blue-400 p-6 rounded shadow-lg hover:shadow-xl transition-transform duration-300 hover:bg-gradient-to-tr from-blue-500 to-blue-200"
+              className="bg-gradient-to-r from-slate-800 via-slate-900 to-black p-6 rounded shadow-lg hover:shadow-xl transition-transform duration-300"
               whileHover={{ scale: 1.1 }}
             >
-              <h2 className="text-2xl font-bold mb-3">{service.title}</h2>
-              <p className="text-gray-700">{service.description}</p>
+              <h2 className="text-2xl font-bold mb-3 text-orange-500">
+                {service.title}
+              </h2>
+              <p className="text-gray-200">{service.description}</p>
             </motion.div>
-          ))}
-        </div>
-      </ScrollReveal>
+          </ScrollReveal>
+        ))}
+      </div>
     </motion.div>
   );
 }
