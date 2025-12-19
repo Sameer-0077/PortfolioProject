@@ -9,6 +9,7 @@ const About = () => {
   const skills = {
     Languages: [
       { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
       { name: "Java", icon: "devicon-java-plain colored" },
     ],
     "Front-end": [
@@ -28,14 +29,14 @@ const About = () => {
     "Other Tools & Tech": [
       { name: "Git", icon: "devicon-git-plain colored" },
       { name: "GitHub", icon: "devicon-github-original colored" },
-      { name: "VS Code", icon: "devicon-vscode-plain colored" },
       { name: "Postman", icon: "devicon-postman-plain colored" },
+      { name: "VS Code", icon: "devicon-vscode-plain colored" },
     ],
   };
   return (
     <motion.div
       id="about"
-      className="p-10 md:p-20 bg-gradient-to-tl from-blue-500 to-blue-200 text-gray-900"
+      className="p-10 md:p-20 bg-gradient-to-r from-slate-800 via-slate-900 to-black text-gray-900"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -62,7 +63,7 @@ const About = () => {
 
       <ScrollReveal delay={0.5} direction="right">
         <motion.p
-          className="mt-6 text-gray-800 text-lg text-center max-w-4xl mx-auto leading-relaxed"
+          className="mt-6 text-gray-200 text-lg text-center max-w-4xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
@@ -98,7 +99,7 @@ const About = () => {
           <br />
           I thrive on continuous learning and love exploring new technologies
           and methodologies. <br />{" "}
-          <span className="font-medium text-green-800">
+          <span className="font-medium text-green-700">
             Let's connect and discuss how we can create impactful solutions
             together!🤝
           </span>
@@ -121,9 +122,9 @@ const About = () => {
             {Object.entries(skills).map(([category, items]) => (
               <div
                 key={category}
-                className="bg-black/65  rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl transition-shadow duration-300"
+                className="bg-gray-900  rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl transition-shadow duration-300"
               >
-                <h2 className="text-2xl text-green-500 font-semibold mb-6 border-b border-gray-600 pb-2">
+                <h2 className="text-2xl text-orange-500 font-semibold mb-6 border-b border-gray-600 pb-2">
                   {category}
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
@@ -135,7 +136,7 @@ const About = () => {
                       <i
                         className={`${skill.icon} text-5xl group-hover:scale-110 transition-transform duration-300`}
                       ></i>
-                      <span className="mt-2 text-xl text-gray-300 group-hover:text-white">
+                      <span className="mt-2 text-xl text-white group-hover:text-white">
                         {skill.name}
                       </span>
                     </div>
