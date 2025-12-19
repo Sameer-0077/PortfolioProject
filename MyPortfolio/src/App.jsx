@@ -12,22 +12,15 @@ import Layout from "./Layout";
 function App() {
   return (
     <>
-      <div className="bg-gradient-to-tr from-blue-200 to-blue-500 min-h-screen">
+      <div className="bg-gradient-to-r from-slate-800 via-slate-900 to-black min-h-screen overflow-x-hidden pt-16">
         <Router>
           <Layout />
-          {/* <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Project />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes> */}
+          <Home />
+          <About />
+          <Project />
+          <Services />
+          <Contact />
         </Router>
-        <Home />
-        <About />
-        <Project />
-        <Services />
-        <Contact />
       </div>
     </>
   );
