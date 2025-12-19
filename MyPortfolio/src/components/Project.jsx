@@ -128,30 +128,34 @@ const Projects = () => {
         </motion.h1>
       </ScrollReveal>
 
-      <ScrollReveal delay={0.2} direction="right">
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectList.map((project, index) => (
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projectList.map((project, index) => (
+          <ScrollReveal delay={0.1} direction="right">
             <motion.div
               key={index}
-              className="bg-blue-400 p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl hover:bg-gradient-to-tr from-blue-500 to-blue-300 text-white transition duration-300"
+              className="bg-gradient-to-tr from-gray-900 to-black p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl  text-white transition duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              <h2 className="text-2xl font-bold">{project.title}</h2>
+              <h2 className="text-2xl font-bold text-green-500">
+                {project.title}
+              </h2>
               <p className="mt-2 text-gray-100">{project.description}</p>
 
-              <h3 className="mt-4 font-semibold">Features:</h3>
+              <h3 className="mt-4 font-semibold text-orange-400">Features:</h3>
               <ul className="list-disc ml-5 text-gray-100">
                 {project.features.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
 
-              <h3 className="mt-4 font-semibold">Tech Stack:</h3>
+              <h3 className="mt-4 font-semibold text-orange-400">
+                Tech Stack:
+              </h3>
               <div className="flex flex-wrap gap-2 mt-2">
                 {project.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold shadow-md"
+                    className="bg-gray-900 text-green-500 px-3 py-1 rounded-full text-sm font-semibold shadow-md"
                   >
                     {tech}
                   </span>
@@ -164,7 +168,7 @@ const Projects = () => {
                   href={project.webLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-green-600 transition duration-300"
+                  className="bg-gray-900 text-blue-500 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-green-400 transition duration-300"
                 >
                   Live Demo
                 </a>
@@ -172,15 +176,15 @@ const Projects = () => {
                   href={project.gitRepo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-400 transition duration-300"
+                  className="bg-gray-900 text-gray-200 px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-400 transition duration-300"
                 >
                   GitHub Repo
                 </a>
               </div>
             </motion.div>
-          ))}
-        </div>
-      </ScrollReveal>
+          </ScrollReveal>
+        ))}
+      </div>
     </motion.div>
   );
 };
